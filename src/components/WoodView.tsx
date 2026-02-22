@@ -211,14 +211,14 @@ const WoodView = () => {
       {/* Grid View */}
       <div>
         {filterButtons}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {filteredWoodTypes.map((wood) => (
             <div
               key={wood.id}
-              className="rounded-lg overflow-visible shadow-lg hover:shadow-2xl transition-shadow cursor-pointer group border-2 border-amber-950 drop-shadow-md"
+              className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow cursor-pointer group border-2 border-amber-950 drop-shadow-md"
               onClick={() => handleSelectWood(wood)}
             >
-              <div className="relative overflow-hidden bg-muted h-48 sm:h-56 md:h-64">
+              <div className="relative overflow-hidden bg-muted aspect-square sm:aspect-auto sm:h-56 md:h-64">
                 <img
                   src={getFirstImage(wood.image)}
                   alt={wood.name}
