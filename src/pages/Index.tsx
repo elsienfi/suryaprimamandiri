@@ -14,6 +14,9 @@ const Index = () => {
         <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-16">
           <div className="text-center mb-8 sm:mb-12">
             <h1 className="heading-primary mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl">Variasi Veneer Berkualitas</h1>
+            <p className="text-body text-black max-w-2xl mx-auto px-2 sm:px-0 text-sm sm:text-base">
+              Dengan veneer pilihan terbaik, dinding anda terlihat semakin menawan.
+            </p>
           </div>
 
           <WoodView />
