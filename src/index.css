@@ -2,30 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
     --background: 40 100% 88%;
-    --foreground: 0 0% 0%;
+    --foreground: 220 40% 13%;
 
     --card: 45 25% 94%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 220 40% 13%;
 
     --popover: 45 30% 96%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 220 40% 13%;
 
     --primary: 220 60% 25%;
     --primary-foreground: 45 30% 96%;
 
     --secondary: 45 80% 55%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground: 220 40% 13%;
 
     --muted: 45 20% 90%;
     --muted-foreground: 220 20% 40%;
 
     --accent: 45 80% 55%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 220 40% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -57,25 +57,25 @@
 
   .dark {
     --background: 220 40% 10%;
-    --foreground: 0 0% 0%;
+    --foreground: 45 30% 96%;
 
     --card: 220 40% 13%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 45 30% 96%;
 
     --popover: 220 40% 13%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 45 30% 96%;
 
     --primary: 45 80% 55%;
     --primary-foreground: 220 40% 10%;
 
     --secondary: 220 40% 20%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground: 45 30% 96%;
 
     --muted: 220 30% 20%;
     --muted-foreground: 45 20% 70%;
 
     --accent: 45 80% 55%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 220 40% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -95,11 +95,11 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     color: hsl(var(--heading));
   }
 }
@@ -119,7 +119,7 @@
   }
 
   .heading-primary {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     @apply text-4xl md:text-5xl font-bold italic;
     color: hsl(var(--heading));
   }

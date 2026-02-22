@@ -20,13 +20,21 @@ const Header = () => {
       <nav className="hidden sm:flex items-center gap-4 md:gap-8">
         <Link
           to="/"
-          className={`nav-link pb-1 text-sm md:text-base ${location.pathname === "/" ? "nav-link-active" : ""}`}
+          className={`py-2 px-4 rounded-lg transition-colors border border-amber-950 drop-shadow-md text-sm md:text-base ${
+            location.pathname === "/"
+              ? "bg-background text-black"
+              : "text-black bg-border hover:bg-white/20"
+          }`}
         >
           Beranda
         </Link>
         <Link
           to="/tentang-kami"
-          className={`nav-link pb-1 text-sm md:text-base ${location.pathname === "/tentang-kami" ? "nav-link-active" : ""}`}
+          className={`py-2 px-4 rounded-lg transition-colors border border-amber-950 drop-shadow-md text-sm md:text-base ${
+            location.pathname === "/tentang-kami"
+              ? "bg-background/75 text-black"
+              : "text-black bg-border hover:bg-white/20"
+          }`}
         >
           Tentang Kami
         </Link>
