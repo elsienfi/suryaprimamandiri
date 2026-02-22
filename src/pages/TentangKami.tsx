@@ -7,34 +7,34 @@ const TentangKami = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       
-      <main className="flex-1 py-12 md:py-16 px-8 md:px-16">
+      <main className="flex-1 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="heading-primary mb-8">CV Surya Prima Mandiri</h1>
+          <h1 className="heading-primary mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-5xl">CV Surya Prima Mandiri</h1>
           
-          <div className="space-y-6 text-body text-foreground">
-            <p>
+          <div className="space-y-4 sm:space-y-6 text-body text-foreground">
+            <p className="text-sm sm:text-base">
               Di Surya Prima Mandiri, anda dapat memesan veneer kayu dengan kualitas terbaik. Dengan variasi kayu lokal anda dapat memilih kayu yang sesuai untuk pemakaian anda. Kayu kami dipilih dengan ketelitian untuk memastikan kepuasan anda.
             </p>
             
-            <p className="text-foreground font-bold">
+            <p className="text-foreground font-bold text-sm sm:text-base">
               Tunggu apa lagi? Lihat katalog produk kami, pilih produk kami, kontak narahubung kami!
             </p>
           </div>
 
           {/* Address Card */}
-          <div className="card-address mt-10">
-            <h2 className="font-serif font-semibold text-xl text-heading mb-4">Alamat Kami</h2>
-            <div className="text-body space-y-1">
+          <div className="card-address mt-8 sm:mt-10">
+            <h2 className="font-serif font-semibold text-xl sm:text-2xl text-heading mb-4">Alamat Kami</h2>
+            <div className="text-body space-y-1 text-sm sm:text-base">
               <p>Kampung Babakan RT 03/04, Binong, Curug, Tangerang 15810</p>
               <p>Dekat Masjid Al-Hidayah</p>
             </div>
             
             {/* Map Preview */}
-            <div className="mt-4 rounded-lg overflow-hidden">
+            <div className="mt-4 rounded-lg overflow-hidden aspect-video sm:aspect-auto sm:h-[300px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d106.6!3d-6.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTgnMDAuMCJTIDEwNsKwMzYnMDAuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
                 width="100%"
-                height="300"
+                height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -47,7 +47,7 @@ const TentangKami = () => {
               href="https://maps.google.com/?q=Kampung+Babakan+RT+03/04,+Binong,+Curug,+Tangerang+15810" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-3 text-gold hover:text-gold/80 transition-colors font-bold"
+              className="inline-flex items-center gap-2 mt-3 text-gold hover:text-gold/80 transition-colors font-bold text-sm sm:text-base"
             >
               <MapPin className="w-4 h-4" />
               Lihat di Google Maps
@@ -55,8 +55,8 @@ const TentangKami = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="mt-8">
-            <p className="text-foreground font-bold">
+          <div className="mt-8 sm:mt-10">
+            <p className="text-foreground font-bold text-sm sm:text-base">
               Untuk informasi lebih lanjut hubungi{" "}
               <a href="https://wa.me/6289654343198" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">
                 +62 896 5434 3198

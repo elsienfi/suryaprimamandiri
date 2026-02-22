@@ -15,29 +15,29 @@ type WoodCategory = "all" | "lokal" | "import";
 const woodTypes: WoodType[] = [
   {
     id: 1,
-    name: "Kayu Jati Perhutani",
-    description: "Kayu jati pilihan dengan kualitas terbaik, tahan lama hingga puluhan tahun. Cocok untuk furniture berkelas tinggi.",
+    name: "Veneer Jati Perhutani",
+    description: "Veneer jati pilihan dengan kualitas terbaik, tahan lama hingga puluhan tahun. Cocok untuk furniture berkelas tinggi.",
     image: "/images/Jati Perhutani.jpg",
     category: "lokal",
   },
   {
     id: 2,
-    name: "Kayu Mahoni",
-    description: "Kayu mahoni dengan tekstur halus dan warna merah kecoklatan yang elegan. Ideal untuk interior mewah.",
+    name: "Veneer Mahoni",
+    description: "Veneer mahoni dengan tekstur halus dan warna merah kecoklatan yang elegan. Ideal untuk interior mewah.",
     image: "/images/Mahoni.jpg",
     category: "lokal",
   },
   {
     id: 3,
-    name: "Kayu Sungkai",
-    description: "Kayu sungkai dengan serat indah dan daya tahan yang baik. Pilihan tepat untuk berbagai kebutuhan.",
+    name: "Veneer Sungkai",
+    description: "Veneer sungkai dengan serat indah dan daya tahan yang baik. Pilihan tepat untuk berbagai kebutuhan.",
     image: "/images/Sungkai.jpg",
     category: "lokal",
   },
   {
     id: 4,
-    name: "Kayu Amara",
-    description: "Kayu amara dengan serat indah dan daya tahan yang baik. Pilihan tepat untuk berbagai kebutuhan.",
+    name: "Veneer Amara",
+    description: "Veneer amara dengan serat indah dan daya tahan yang baik. Pilihan tepat untuk berbagai kebutuhan.",
     image: "/images/Amara.jpg",
     category: "lokal",
   },
@@ -80,12 +80,12 @@ const WoodView = () => {
   };
 
   const filterButtons = (
-    <div className="flex justify-start gap-2 mb-4">
+    <div className="flex flex-wrap justify-start gap-2 mb-4">
       <button
         onClick={() => handleFilterChange("all")}
-        className={`px-3 py-2 rounded-lg text-sm transition-colors ${
+        className={`px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm transition-colors border border-amber-950 drop-shadow-md ${
           categoryFilter === "all"
-            ? "bg-navy text-primary-foreground"
+            ? "bg-[#802212] text-primary-foreground"
             : "bg-border text-foreground hover:bg-border/80"
         }`}
       >
@@ -93,9 +93,9 @@ const WoodView = () => {
       </button>
       <button
         onClick={() => handleFilterChange("lokal")}
-        className={`px-3 py-2 rounded-lg text-sm transition-colors ${
+        className={`px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm transition-colors border border-amber-950 drop-shadow-md ${
           categoryFilter === "lokal"
-            ? "bg-navy text-primary-foreground"
+            ? "bg-[#802212] text-primary-foreground"
             : "bg-border text-foreground hover:bg-border/80"
         }`}
       >
@@ -103,9 +103,9 @@ const WoodView = () => {
       </button>
       <button
         onClick={() => handleFilterChange("import")}
-        className={`px-3 py-2 rounded-lg text-sm transition-colors ${
+        className={`px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm transition-colors border border-amber-950 drop-shadow-md ${
           categoryFilter === "import"
-            ? "bg-navy text-primary-foreground"
+            ? "bg-[#802212] text-primary-foreground"
             : "bg-border text-foreground hover:bg-border/80"
         }`}
       >
@@ -115,32 +115,32 @@ const WoodView = () => {
   );
 
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-0">
       {/* View Toggle Buttons */}
-      <div className="flex justify-center gap-3 mb-8">
+      <div className="flex justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 flex-wrap">
         <button
           onClick={() => setViewMode("grid-title")}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+          className={`flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-colors text-sm sm:text-base border border-amber-950 drop-shadow-md ${
             viewMode === "grid-title"
-              ? "bg-navy text-primary-foreground"
+              ? "bg-[#802212] text-primary-foreground"
               : "bg-border text-foreground hover:bg-border/80"
           }`}
           aria-label="Grid title view"
         >
           <Grid2X2 className="w-4 h-4" />
-          <span className="hidden sm:inline text-sm">Simple</span>
+          <span className="hidden sm:inline">Simple</span>
         </button>
         <button
           onClick={() => setViewMode("carousel")}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+          className={`flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-colors text-sm sm:text-base border border-amber-950 drop-shadow-md ${
             viewMode === "carousel"
-              ? "bg-navy text-primary-foreground"
+              ? "bg-[#802212] text-primary-foreground"
               : "bg-border text-foreground hover:bg-border/80"
           }`}
           aria-label="Carousel view"
         >
           <Columns3 className="w-4 h-4" />
-          <span className="hidden sm:inline text-sm">Detailed</span>
+          <span className="hidden sm:inline">Detailed</span>
         </button>
       </div>
 
@@ -148,19 +148,19 @@ const WoodView = () => {
       {viewMode === "carousel" && (
         <div className="relative w-full">
           {filterButtons}
-          <div className="relative overflow-hidden rounded-lg">
+          <div className="relative overflow-hidden rounded-lg border border-amber-950 drop-shadow-md">
             <img
               src={currentWood?.image}
               alt={currentWood?.name}
-              className="w-full h-[480px] md:h-[620px] object-cover transition-opacity duration-500"
+              className="w-full h-64 sm:h-96 md:h-[480px] lg:h-[620px] object-cover transition-opacity duration-500"
             />
             
             {/* Overlay with text */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-dark/80 to-transparent p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-serif font-bold text-primary-foreground mb-2">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-dark/80 to-transparent p-4 sm:p-6 md:p-8">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-primary-foreground mb-1 sm:mb-2">
                 {currentWood?.name}
               </h3>
-              <p className="text-primary-foreground/90 text-sm md:text-base max-w-xl">
+              <p className="text-primary-foreground/90 text-xs sm:text-sm md:text-base max-w-xl line-clamp-2 sm:line-clamp-3">
                 {currentWood?.description}
               </p>
             </div>
@@ -168,14 +168,14 @@ const WoodView = () => {
             {/* Navigation buttons */}
             <button
               onClick={goToPrevious}
-              className="carousel-button absolute left-4 top-1/2 -translate-y-1/2 bg-white/80"
+              className="carousel-button absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 border border-amber-950 drop-shadow-md"
               aria-label="Previous"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={goToNext}
-              className="carousel-button absolute right-4 top-1/2 -translate-y-1/2 bg-white/80"
+              className="carousel-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 border border-amber-950 drop-shadow-md"
               aria-label="Next"
             >
               <ChevronRight className="w-5 h-5" />
@@ -188,7 +188,7 @@ const WoodView = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
+                className={`w-2 h-2 rounded-full transition-colors border border-amber-950 drop-shadow-md ${
                   index === currentIndex ? "bg-navy" : "bg-border"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -202,21 +202,21 @@ const WoodView = () => {
       {viewMode === "grid-title" && (
         <div>
           {filterButtons}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredWoodTypes.map((wood, index) => (
               <div
                 key={wood.id}
-                className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer group"
+                className="rounded-lg overflow-visible shadow-lg hover:shadow-2xl transition-shadow cursor-pointer group border border-amber-950 drop-shadow-md"
                 onClick={() => handleSelectWood(index)}
               >
-                <div className="relative overflow-hidden bg-muted h-64">
+                <div className="relative overflow-hidden bg-muted h-48 sm:h-56 md:h-64">
                   <img
                     src={wood.image}
                     alt={wood.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-dark/80 to-transparent p-4">
-                    <h3 className="text-lg font-serif font-bold text-primary-foreground">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-dark/80 to-transparent p-3 sm:p-4">
+                    <h3 className="text-base sm:text-lg font-serif font-bold text-primary-foreground">
                       {wood.name}
                     </h3>
                   </div>
@@ -229,23 +229,23 @@ const WoodView = () => {
 
       {/* Grid Detail View (Title + Description + Image) */}
       {viewMode === "grid-detail" && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {woodTypes.map((wood) => (
             <div
               key={wood.id}
-              className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer group"
+              className="rounded-lg overflow-visible shadow-md hover:shadow-lg transition-shadow cursor-pointer group border border-amber-950 drop-shadow-md"
             >
-              <div className="relative overflow-hidden bg-muted h-48">
+              <div className="relative overflow-hidden bg-muted h-96 sm:h-64 lg:h-72">
                 <img
                   src={wood.image}
                   alt={wood.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-dark/80 to-transparent p-5">
-                  <h3 className="text-lg font-serif font-bold text-primary-foreground mb-2">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-dark/80 to-transparent p-3 sm:p-5">
+                  <h3 className="text-base sm:text-lg font-serif font-bold text-primary-foreground mb-1 sm:mb-2">
                     {wood.name}
                   </h3>
-                  <p className="text-sm text-primary-foreground/90 line-clamp-3 min-h-[72px]">
+                  <p className="text-xs sm:text-sm text-primary-foreground/90 line-clamp-2 sm:line-clamp-3 min-h-[48px] sm:min-h-[72px]">
                     {wood.description}
                   </p>
                 </div>
