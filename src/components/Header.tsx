@@ -22,17 +22,16 @@ const Header = () => {
           to="/"
           className={`py-2 px-4 rounded-lg transition-colors border border-amber-950 drop-shadow-md text-sm md:text-base ${
             location.pathname === "/"
-              ? "bg-background text-black"
+              ? "bg-background text-black hover:bg-background/75"
               : "text-black bg-border hover:bg-white/20"
           }`}
         >
-          Beranda
-        </Link>
+          Beranda        </Link>
         <Link
           to="/tentang-kami"
           className={`py-2 px-4 rounded-lg transition-colors border border-amber-950 drop-shadow-md text-sm md:text-base ${
             location.pathname === "/tentang-kami"
-              ? "bg-background/75 text-black"
+              ? "bg-background text-black hover:bg-background/75"
               : "text-black bg-border hover:bg-white/20"
           }`}
         >
@@ -57,7 +56,7 @@ const Header = () => {
               to="/"
               className={`block py-2 px-4 rounded-lg transition-colors border border-amber-950 drop-shadow-md ${
                 location.pathname === "/"
-                  ? "bg-background text-black"
+                  ? "bg-background text-black hover:bg-background/75"
                   : "text-black bg-border hover:bg-white/20"
               }`}
               onClick={() => setIsOpen(false)}
@@ -68,7 +67,7 @@ const Header = () => {
               to="/tentang-kami"
               className={`block py-2 px-4 rounded-lg transition-colors border border-amber-950 drop-shadow-md ${
                 location.pathname === "/tentang-kami"
-                  ? "bg-background/75 text-black"
+                  ? "bg-background text-black hover:bg-background/75"
                   : "text-black bg-border hover:bg-white/20"
               }`}
               onClick={() => setIsOpen(false)}
