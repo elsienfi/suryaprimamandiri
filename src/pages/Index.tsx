@@ -1,6 +1,5 @@
 import { TreeDeciduous, Sparkles, Infinity } from "lucide-react";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import WoodView from "@/components/WoodView";
 import FeatureCard from "@/components/FeatureCard";
 
@@ -22,8 +21,6 @@ const Index = () => {
           <WoodView />
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

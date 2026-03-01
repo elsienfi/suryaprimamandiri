@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { MapPin } from "lucide-react";
 
 const TentangKami = () => {
@@ -66,8 +65,6 @@ const TentangKami = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
