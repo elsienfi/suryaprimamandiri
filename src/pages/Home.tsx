@@ -120,11 +120,11 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="max-w-3xl ml-auto w-full text-right relative z-10">
             <h2 className="heading-primary text-[#e4e0d7] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">
-              Sentuhan Keindahan Alami <br /> dalam Setiap Lembaran
+              Nyaman dalam pelukan alam.
             </h2>
             <div className="space-y-3 sm:space-y-4 text-[#e4e0d7] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-sm sm:text-base">
               <p>
-                Memperindah Suasana Rumah
+                Keindahan alami, kualitas terpilih, demi ruangan tampak asri
                 </p>
             </div>
           </div>
